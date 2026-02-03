@@ -47,6 +47,24 @@ div{
   margin: 0 auto;
 }
 
+.backtotop{
+  position: fixed;
+  text-decoration: none;
+  bottom: 20px;
+  right: 20px;
+  font-size: 25px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: var(--accent-color);
+  border: 4px solid var(--primary-color);
+  border-radius: 50%;
+  z-index: 2;
+}
+
 /* Header */
 header {
   background: var(--white);
@@ -66,9 +84,21 @@ header.scrolled {
   color: var(--primary-color);
 }
 
-header .logo img {
+header .logo{
   width: 120px;
+  height: 65px;
+}
+
+header .logo img {
+  width: 100%;
+  height: 100%;
   transition: width 0.3s ease; 
+}
+
+header.scrolled .logo{
+  width: 120px;
+  height: 60px;
+  padding: 5px;
 }
 
 header.scrolled .logo img {
@@ -80,11 +110,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 5px 5%;
-}
-
-.logo img {
-  width: 150px;
-  height: auto;
 }
 
 .nav-links {
@@ -633,7 +658,7 @@ footer {
 
   .nav-links {
     position: fixed;
-    top: 100px;
+    top: 95px;
     right: -100%;
     flex-direction: column;
     background: var(--white);
@@ -646,6 +671,19 @@ footer {
   header.scrolled .nav-links{
     top: 70px;
   }
+
+.nav-links.active ~ .menu-toggle span:nth-child(1) {
+    transform: rotate(180deg) translate(0px, -7px);
+  }
+  
+  .nav-links.active ~ .menu-toggle span:nth-child(2) {
+    transform: rotate(-90deg);
+  }
+  
+  .nav-links.active ~ .menu-toggle span:nth-child(3) {
+    transform: rotate(180deg) translate(0px, 9px);
+    opacity: 0;
+}
 
   .nav-links.active {
     right: 0;
@@ -677,10 +715,6 @@ footer {
 @media (max-width: 480px) {
   .home-content h1 {
     font-size: 2rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
   }
 
   .services-grid {
