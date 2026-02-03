@@ -36,3 +36,12 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+// Preloader functionality
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("loader");
+  preloader.classList.add("hidden");
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500);
+});
