@@ -1,16 +1,24 @@
 // Mobile Menu Toggle
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
+const navlabel = document.getElementById("navlabel");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+  navlabel.classList.toggle("active");
 });
 
-// Close mobile menu when clicking a link
+// Close everything when a link is clicked
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
+    navlabel.classList.remove("active");
   });
+});
+
+navlabel.addEventListener("click", ()=>{
+  navLinks.classList.remove("active");
+  navlabel.classList.remove("active");
 });
 
 // Smooth Scrolling

@@ -700,6 +700,21 @@ footer {
     opacity: 0;
   }
 
+  .navlabel{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .navlabel.active{
+    display: block;
+  }
+
   .nav-links.active {
     right: 0;
   }
