@@ -16,7 +16,7 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   });
 });
 
-navlabel.addEventListener("click", ()=>{
+navlabel.addEventListener("click", () => {
   navLinks.classList.remove("active");
   navlabel.classList.remove("active");
 });
@@ -53,3 +53,6 @@ window.addEventListener("load", () => {
     preloader.style.display = "none";
   }, 500);
 });
+
+// Initialize Lucide icons
+lucide.createIcons();

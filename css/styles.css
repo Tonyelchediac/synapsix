@@ -65,7 +65,9 @@ div {
   border-radius: 50%;
   z-index: 2;
 }
-
+.backtotop svg{
+  transform: rotateX(180deg);
+}
 /* Header */
 header {
   background: var(--white);
@@ -311,12 +313,13 @@ nav {
   box-shadow: var(--shadow-lg);
 }
 
-.service-icon img {
-  width: 80px;
-  height: 80px;
+.service-icon svg {
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .service-card h3 {
@@ -392,6 +395,7 @@ nav {
 .atags {
   margin-top: 10px;
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -399,8 +403,13 @@ nav {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   color: var(--primary-color);
+}
+
+.atags svg{
+  height: 15px;
+  width: auto;
 }
 
 /* Testimonials Section */
@@ -510,6 +519,11 @@ nav {
   font-size: 1.2rem;
 }
 
+.contact-icon svg{
+  height: 20px;
+  width: auto;
+}
+
 .contact-form {
   background: var(--white);
   padding: 2rem;
@@ -616,6 +630,11 @@ footer {
   text-decoration: none;
   color: var(--white);
   transition: all 0.3s ease;
+}
+
+.social-icon svg{
+  height: 20px;
+  width: auto;
 }
 
 .social-icon:hover {
